@@ -1,0 +1,3 @@
+scan_root : "/home/vedant/cpp_dev"
+output_file : "metadata.json"
+log_level : "info"
