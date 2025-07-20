@@ -1,3 +1,13 @@
-scan_root : "/home/vedant/cpp_dev"
-output_file : "metadata.json"
-log_level : "info"
+machine:
+ id: "a1f3fcd8-3e4a-4bd2-bce2-e85e4fcb902f"
+ hostname: "pc-01"
+ ip: "192.168.1.101"
+ port: 5000
+
+parser:
+ scan_root: "/home/vedant/cpp_dev"
+ output_file: "metadata.json"
+ log_level: "info"
+
+central_server:
+ ip: "192.168.1.100"

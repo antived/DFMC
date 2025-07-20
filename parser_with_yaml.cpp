@@ -22,7 +22,6 @@
 using namespace rapidjson;
 using namespace std;
 using namespace std::filesystem;
-using namespace rapidjson;
 /* This is to basically go through all of the files in the destop directory of the
     PC and then make a metadata json of all the metadata that is collected.*/
 
@@ -46,8 +45,16 @@ void parser(){
     }
     auto logger = spdlog::basic_logger_mt("file_logger","logs/scan.log");
     YAML::Node config_read = YAML::LoadFile("config.yaml");
-    base_dir = config_read["scan_root"].as<string>();
-    string output_filename = config_read["output_file"].as<string>();
+    if (!config_read["parser"]) {
+        throw std::runtime_error("Missing 'parser' section in config.yaml");
+    }
+    YAML::Node parser_node = config_read["parser"];
+    if (!parser_node["scan_root"] || !parser_node["output_file"]) {
+        throw std::runtime_error("Missing required fields under 'parser'");
+    }
+    base_dir = parser_node["scan_root"].as<std::string>();
+    string output_filename = parser_node["output_file"].as<std::string>();
+    cout << "Parsed base_dir: " << base_dir << ", output_file: " << output_filename << endl;
     logger->info("Scan started for the base directory: {}",base_dir.string());
     if(is_directory(base_dir) && exists(base_dir)){
         //get the metadata of all the files inside.

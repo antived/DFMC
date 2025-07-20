@@ -598,11 +598,17 @@ CMakeFiles/remote_runner.dir/remote_runner.cpp.o: ../remote_runner.cpp \
   /usr/include/asm-generic/errno.h \
   /usr/include/asm-generic/errno-base.h \
   /usr/include/x86_64-linux-gnu/bits/types/error_t.h \
-  ../parser_with_yaml.cpp \
-  /usr/include/c++/11/iostream \
-  /usr/include/c++/11/ostream \
-  /usr/include/c++/11/ios \
+  ../metadata_common.h \
+  /usr/include/c++/11/filesystem \
+  /usr/include/c++/11/bits/fs_fwd.h \
+  /usr/include/c++/11/system_error \
+  /usr/include/x86_64-linux-gnu/c++/11/bits/error_constants.h \
+  /usr/include/c++/11/stdexcept \
+  /usr/include/c++/11/string \
   /usr/include/c++/11/bits/char_traits.h \
+  /usr/include/c++/11/bits/allocator.h \
+  /usr/include/x86_64-linux-gnu/c++/11/bits/c++allocator.h \
+  /usr/include/c++/11/ext/new_allocator.h \
   /usr/include/c++/11/bits/localefwd.h \
   /usr/include/x86_64-linux-gnu/c++/11/bits/c++locale.h \
   /usr/include/c++/11/clocale \
@@ -610,18 +616,12 @@ CMakeFiles/remote_runner.dir/remote_runner.cpp.o: ../remote_runner.cpp \
   /usr/include/x86_64-linux-gnu/bits/locale.h \
   /usr/include/c++/11/cctype \
   /usr/include/ctype.h \
-  /usr/include/c++/11/bits/ios_base.h \
-  /usr/include/c++/11/ext/atomicity.h \
-  /usr/include/x86_64-linux-gnu/c++/11/bits/atomic_word.h \
-  /usr/include/x86_64-linux-gnu/sys/single_threaded.h \
-  /usr/include/c++/11/bits/locale_classes.h \
-  /usr/include/c++/11/string \
-  /usr/include/c++/11/bits/allocator.h \
-  /usr/include/x86_64-linux-gnu/c++/11/bits/c++allocator.h \
-  /usr/include/c++/11/ext/new_allocator.h \
   /usr/include/c++/11/bits/ostream_insert.h \
   /usr/include/c++/11/bits/cxxabi_forced.h \
   /usr/include/c++/11/bits/basic_string.h \
+  /usr/include/c++/11/ext/atomicity.h \
+  /usr/include/x86_64-linux-gnu/c++/11/bits/atomic_word.h \
+  /usr/include/x86_64-linux-gnu/sys/single_threaded.h \
   /usr/include/c++/11/ext/alloc_traits.h \
   /usr/include/c++/11/bits/alloc_traits.h \
   /usr/include/c++/11/bits/stl_construct.h \
@@ -651,43 +651,21 @@ CMakeFiles/remote_runner.dir/remote_runner.cpp.o: ../remote_runner.cpp \
   /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
   /usr/include/c++/11/bits/charconv.h \
   /usr/include/c++/11/bits/basic_string.tcc \
+  /usr/include/c++/11/bits/fs_path.h \
+  /usr/include/c++/11/locale \
+  /usr/include/c++/11/bits/locale_classes.h \
   /usr/include/c++/11/bits/locale_classes.tcc \
-  /usr/include/c++/11/system_error \
-  /usr/include/x86_64-linux-gnu/c++/11/bits/error_constants.h \
-  /usr/include/c++/11/stdexcept \
-  /usr/include/c++/11/streambuf \
-  /usr/include/c++/11/bits/streambuf.tcc \
-  /usr/include/c++/11/bits/basic_ios.h \
   /usr/include/c++/11/bits/locale_facets.h \
   /usr/include/c++/11/cwctype \
   /usr/include/wctype.h \
   /usr/include/x86_64-linux-gnu/bits/wctype-wchar.h \
   /usr/include/x86_64-linux-gnu/c++/11/bits/ctype_base.h \
+  /usr/include/c++/11/bits/ios_base.h \
+  /usr/include/c++/11/streambuf \
+  /usr/include/c++/11/bits/streambuf.tcc \
   /usr/include/c++/11/bits/streambuf_iterator.h \
   /usr/include/x86_64-linux-gnu/c++/11/bits/ctype_inline.h \
   /usr/include/c++/11/bits/locale_facets.tcc \
-  /usr/include/c++/11/bits/basic_ios.tcc \
-  /usr/include/c++/11/bits/ostream.tcc \
-  /usr/include/c++/11/istream \
-  /usr/include/c++/11/bits/istream.tcc \
-  /usr/include/string.h \
-  /usr/include/strings.h \
-  /usr/include/c++/11/map \
-  /usr/include/c++/11/bits/stl_tree.h \
-  /usr/include/c++/11/ext/aligned_buffer.h \
-  /usr/include/c++/11/bits/node_handle.h \
-  /usr/include/c++/11/bits/stl_map.h \
-  /usr/include/c++/11/bits/stl_multimap.h \
-  /usr/include/c++/11/bits/erase_if.h \
-  /usr/include/c++/11/vector \
-  /usr/include/c++/11/bits/stl_uninitialized.h \
-  /usr/include/c++/11/bits/stl_vector.h \
-  /usr/include/c++/11/bits/stl_bvector.h \
-  /usr/include/c++/11/bits/vector.tcc \
-  /usr/include/c++/11/filesystem \
-  /usr/include/c++/11/bits/fs_fwd.h \
-  /usr/include/c++/11/bits/fs_path.h \
-  /usr/include/c++/11/locale \
   /usr/include/c++/11/bits/locale_facets_nonio.h \
   /usr/include/x86_64-linux-gnu/c++/11/bits/time_members.h \
   /usr/include/x86_64-linux-gnu/c++/11/bits/messages_members.h \
@@ -698,339 +676,30 @@ CMakeFiles/remote_runner.dir/remote_runner.cpp.o: ../remote_runner.cpp \
   /usr/include/c++/11/iomanip \
   /usr/include/c++/11/bits/quoted_string.h \
   /usr/include/c++/11/sstream \
+  /usr/include/c++/11/istream \
+  /usr/include/c++/11/ios \
+  /usr/include/c++/11/bits/basic_ios.h \
+  /usr/include/c++/11/bits/basic_ios.tcc \
+  /usr/include/c++/11/ostream \
+  /usr/include/c++/11/bits/ostream.tcc \
+  /usr/include/c++/11/bits/istream.tcc \
   /usr/include/c++/11/bits/sstream.tcc \
   /usr/include/c++/11/codecvt \
   /usr/include/c++/11/ext/concurrence.h \
   /usr/include/c++/11/bits/shared_ptr.h \
   /usr/include/c++/11/bits/shared_ptr_base.h \
   /usr/include/c++/11/bits/allocated_ptr.h \
+  /usr/include/c++/11/ext/aligned_buffer.h \
   /usr/include/c++/11/bits/fs_dir.h \
   /usr/include/c++/11/bits/fs_ops.h \
-  /usr/include/c++/11/fstream \
-  /usr/include/x86_64-linux-gnu/c++/11/bits/basic_file.h \
-  /usr/include/x86_64-linux-gnu/c++/11/bits/c++io.h \
-  /usr/include/c++/11/bits/fstream.tcc \
+  /usr/include/c++/11/iostream \
   /usr/include/c++/11/unordered_map \
   /usr/include/c++/11/bits/hashtable.h \
   /usr/include/c++/11/bits/hashtable_policy.h \
   /usr/include/c++/11/bits/enable_special_members.h \
+  /usr/include/c++/11/bits/node_handle.h \
   /usr/include/c++/11/bits/unordered_map.h \
-  /usr/include/c++/11/cstring \
-  ../rapidjson/include/rapidjson/document.h \
-  ../rapidjson/include/rapidjson/reader.h \
-  ../rapidjson/include/rapidjson/allocators.h \
-  ../rapidjson/include/rapidjson/rapidjson.h \
-  /usr/include/inttypes.h \
-  /usr/include/c++/11/cassert \
-  /usr/include/assert.h \
-  ../rapidjson/include/rapidjson/internal/meta.h \
-  ../rapidjson/include/rapidjson/rapidjson.h \
-  /usr/include/c++/11/memory \
-  /usr/include/c++/11/bits/stl_tempbuf.h \
-  /usr/include/c++/11/bits/stl_raw_storage_iter.h \
-  /usr/include/c++/11/bits/align.h \
-  /usr/include/c++/11/bit \
-  /usr/include/c++/11/bits/shared_ptr_atomic.h \
-  /usr/include/c++/11/bits/atomic_base.h \
-  /usr/include/c++/11/bits/atomic_lockfree_defines.h \
-  /usr/include/c++/11/backward/auto_ptr.h \
-  /usr/include/c++/11/pstl/glue_memory_defs.h \
-  /usr/include/c++/11/pstl/execution_defs.h \
-  ../rapidjson/include/rapidjson/stream.h \
-  ../rapidjson/include/rapidjson/encodings.h \
-  ../rapidjson/include/rapidjson/encodedstream.h \
-  ../rapidjson/include/rapidjson/memorystream.h \
-  ../rapidjson/include/rapidjson/internal/clzll.h \
-  ../rapidjson/include/rapidjson/internal/stack.h \
-  ../rapidjson/include/rapidjson/allocators.h \
-  ../rapidjson/include/rapidjson/internal/swap.h \
-  /usr/include/c++/11/cstddef \
-  ../rapidjson/include/rapidjson/internal/strtod.h \
-  ../rapidjson/include/rapidjson/internal/ieee754.h \
-  ../rapidjson/include/rapidjson/internal/biginteger.h \
-  ../rapidjson/include/rapidjson/internal/diyfp.h \
-  ../rapidjson/include/rapidjson/internal/clzll.h \
-  ../rapidjson/include/rapidjson/internal/pow10.h \
-  /usr/include/c++/11/climits \
-  /usr/lib/gcc/x86_64-linux-gnu/11/include/limits.h \
-  /usr/lib/gcc/x86_64-linux-gnu/11/include/syslimits.h \
-  /usr/include/limits.h \
-  /usr/include/x86_64-linux-gnu/bits/posix1_lim.h \
-  /usr/include/x86_64-linux-gnu/bits/local_lim.h \
-  /usr/include/linux/limits.h \
-  /usr/include/x86_64-linux-gnu/bits/posix2_lim.h \
-  /usr/include/x86_64-linux-gnu/bits/xopen_lim.h \
-  /usr/include/x86_64-linux-gnu/bits/uio_lim.h \
-  ../rapidjson/include/rapidjson/error/error.h \
-  ../rapidjson/include/rapidjson/rapidjson.h \
-  ../rapidjson/include/rapidjson/internal/strfunc.h \
-  ../rapidjson/include/rapidjson/stream.h \
-  ../rapidjson/include/rapidjson/rapidjson.h \
-  /usr/include/c++/11/iterator \
-  /usr/include/c++/11/bits/stream_iterator.h \
-  ../rapidjson/include/rapidjson/writer.h \
-  ../rapidjson/include/rapidjson/internal/dtoa.h \
-  ../rapidjson/include/rapidjson/internal/itoa.h \
-  ../rapidjson/include/rapidjson/internal/itoa.h \
-  ../rapidjson/include/rapidjson/stringbuffer.h \
-  ../rapidjson/include/rapidjson/stringbuffer.h \
-  /usr/include/c++/11/queue \
-  /usr/include/c++/11/deque \
-  /usr/include/c++/11/bits/stl_deque.h \
-  /usr/include/c++/11/bits/deque.tcc \
-  /usr/include/c++/11/bits/stl_heap.h \
-  /usr/include/c++/11/bits/stl_queue.h \
-  ../yaml-cpp/include/yaml-cpp/yaml.h \
-  ../yaml-cpp/include/yaml-cpp/parser.h \
-  ../yaml-cpp/include/yaml-cpp/dll.h \
-  ../yaml-cpp/include/yaml-cpp/emitter.h \
-  /usr/include/c++/11/cmath \
-  /usr/include/math.h \
-  /usr/include/x86_64-linux-gnu/bits/math-vector.h \
-  /usr/include/x86_64-linux-gnu/bits/libm-simd-decl-stubs.h \
-  /usr/include/x86_64-linux-gnu/bits/flt-eval-method.h \
-  /usr/include/x86_64-linux-gnu/bits/fp-logb.h \
-  /usr/include/x86_64-linux-gnu/bits/fp-fast.h \
-  /usr/include/x86_64-linux-gnu/bits/mathcalls-helper-functions.h \
-  /usr/include/x86_64-linux-gnu/bits/mathcalls.h \
-  /usr/include/x86_64-linux-gnu/bits/mathcalls-narrow.h \
-  /usr/include/x86_64-linux-gnu/bits/iscanonical.h \
-  /usr/include/c++/11/bits/specfun.h \
-  /usr/include/c++/11/tr1/gamma.tcc \
-  /usr/include/c++/11/tr1/special_function_util.h \
-  /usr/include/c++/11/tr1/bessel_function.tcc \
-  /usr/include/c++/11/tr1/beta_function.tcc \
-  /usr/include/c++/11/tr1/ell_integral.tcc \
-  /usr/include/c++/11/tr1/exp_integral.tcc \
-  /usr/include/c++/11/tr1/hypergeometric.tcc \
-  /usr/include/c++/11/tr1/legendre_function.tcc \
-  /usr/include/c++/11/tr1/modified_bessel_func.tcc \
-  /usr/include/c++/11/tr1/poly_hermite.tcc \
-  /usr/include/c++/11/tr1/poly_laguerre.tcc \
-  /usr/include/c++/11/tr1/riemann_zeta.tcc \
-  ../yaml-cpp/include/yaml-cpp/binary.h \
-  ../yaml-cpp/include/yaml-cpp/emitterdef.h \
-  ../yaml-cpp/include/yaml-cpp/emittermanip.h \
-  ../yaml-cpp/include/yaml-cpp/null.h \
-  ../yaml-cpp/include/yaml-cpp/ostream_wrapper.h \
-  ../yaml-cpp/include/yaml-cpp/fptostring.h \
-  ../yaml-cpp/include/yaml-cpp/emitterstyle.h \
-  ../yaml-cpp/include/yaml-cpp/stlemitter.h \
-  /usr/include/c++/11/list \
-  /usr/include/c++/11/bits/stl_list.h \
-  /usr/include/c++/11/bits/list.tcc \
-  /usr/include/c++/11/set \
-  /usr/include/c++/11/bits/stl_set.h \
-  /usr/include/c++/11/bits/stl_multiset.h \
-  ../yaml-cpp/include/yaml-cpp/exceptions.h \
-  ../yaml-cpp/include/yaml-cpp/mark.h \
-  ../yaml-cpp/include/yaml-cpp/noexcept.h \
-  ../yaml-cpp/include/yaml-cpp/traits.h \
-  ../yaml-cpp/include/yaml-cpp/node/node.h \
-  ../yaml-cpp/include/yaml-cpp/node/detail/iterator_fwd.h \
-  ../yaml-cpp/include/yaml-cpp/node/ptr.h \
-  ../yaml-cpp/include/yaml-cpp/node/type.h \
-  ../yaml-cpp/include/yaml-cpp/node/impl.h \
-  ../yaml-cpp/include/yaml-cpp/node/detail/memory.h \
-  ../yaml-cpp/include/yaml-cpp/node/detail/node.h \
-  ../yaml-cpp/include/yaml-cpp/node/detail/node_ref.h \
-  ../yaml-cpp/include/yaml-cpp/node/detail/node_data.h \
-  ../yaml-cpp/include/yaml-cpp/node/detail/node_iterator.h \
-  ../yaml-cpp/include/yaml-cpp/node/iterator.h \
-  ../yaml-cpp/include/yaml-cpp/node/detail/iterator.h \
-  /usr/include/c++/11/atomic \
-  ../yaml-cpp/include/yaml-cpp/node/convert.h \
-  /usr/include/c++/11/valarray \
-  /usr/include/c++/11/algorithm \
-  /usr/include/c++/11/bits/stl_algo.h \
-  /usr/include/c++/11/bits/algorithmfwd.h \
-  /usr/include/c++/11/bits/uniform_int_dist.h \
-  /usr/include/c++/11/pstl/glue_algorithm_defs.h \
-  /usr/include/c++/11/functional \
-  /usr/include/c++/11/bits/std_function.h \
-  /usr/include/c++/11/bits/valarray_array.h \
-  /usr/include/c++/11/bits/valarray_array.tcc \
-  /usr/include/c++/11/bits/valarray_before.h \
-  /usr/include/c++/11/bits/slice_array.h \
-  /usr/include/c++/11/bits/valarray_after.h \
-  /usr/include/c++/11/bits/gslice.h \
-  /usr/include/c++/11/bits/gslice_array.h \
-  /usr/include/c++/11/bits/mask_array.h \
-  /usr/include/c++/11/bits/indirect_array.h \
-  ../yaml-cpp/include/yaml-cpp/node/detail/impl.h \
-  ../yaml-cpp/include/yaml-cpp/node/parse.h \
-  ../yaml-cpp/include/yaml-cpp/node/emit.h \
-  ../spdlog/include/spdlog/spdlog.h \
-  ../spdlog/include/spdlog/common.h \
-  ../spdlog/include/spdlog/details/null_mutex.h \
-  ../spdlog/include/spdlog/tweakme.h \
-  ../spdlog/include/spdlog/fmt/fmt.h \
-  ../spdlog/include/spdlog/fmt/bundled/format.h \
-  ../spdlog/include/spdlog/fmt/bundled/base.h \
-  ../spdlog/include/spdlog/fmt/bundled/format.h \
-  ../spdlog/include/spdlog/fmt/bundled/format-inl.h \
-  ../spdlog/include/spdlog/common-inl.h \
-  ../spdlog/include/spdlog/details/registry.h \
-  ../spdlog/include/spdlog/details/periodic_worker.h \
-  /usr/include/c++/11/condition_variable \
-  /usr/include/c++/11/bits/std_mutex.h \
-  /usr/include/c++/11/bits/unique_lock.h \
-  /usr/include/c++/11/mutex \
-  ../spdlog/include/spdlog/details/periodic_worker-inl.h \
-  ../spdlog/include/spdlog/details/registry-inl.h \
-  ../spdlog/include/spdlog/logger.h \
-  ../spdlog/include/spdlog/details/backtracer.h \
-  ../spdlog/include/spdlog/details/circular_q.h \
-  ../spdlog/include/spdlog/details/log_msg_buffer.h \
-  ../spdlog/include/spdlog/details/log_msg.h \
-  ../spdlog/include/spdlog/details/log_msg-inl.h \
-  ../spdlog/include/spdlog/details/os.h \
-  ../spdlog/include/spdlog/details/os-inl.h \
-  /usr/include/x86_64-linux-gnu/sys/stat.h \
-  /usr/include/x86_64-linux-gnu/bits/stat.h \
-  /usr/include/x86_64-linux-gnu/bits/struct_stat.h \
-  /usr/include/x86_64-linux-gnu/bits/statx.h \
-  /usr/include/linux/stat.h \
-  /usr/include/linux/types.h \
-  /usr/include/x86_64-linux-gnu/asm/types.h \
-  /usr/include/asm-generic/types.h \
-  /usr/include/asm-generic/int-ll64.h \
-  /usr/include/x86_64-linux-gnu/asm/bitsperlong.h \
-  /usr/include/asm-generic/bitsperlong.h \
-  /usr/include/linux/posix_types.h \
-  /usr/include/linux/stddef.h \
-  /usr/include/x86_64-linux-gnu/asm/posix_types.h \
-  /usr/include/x86_64-linux-gnu/asm/posix_types_64.h \
-  /usr/include/asm-generic/posix_types.h \
-  /usr/include/x86_64-linux-gnu/bits/statx-generic.h \
-  /usr/include/x86_64-linux-gnu/bits/types/struct_statx_timestamp.h \
-  /usr/include/x86_64-linux-gnu/bits/types/struct_statx.h \
-  /usr/include/fcntl.h \
-  /usr/include/x86_64-linux-gnu/bits/fcntl.h \
-  /usr/include/x86_64-linux-gnu/bits/fcntl-linux.h \
-  /usr/include/x86_64-linux-gnu/bits/types/struct_iovec.h \
-  /usr/include/linux/falloc.h \
-  /usr/include/unistd.h \
-  /usr/include/x86_64-linux-gnu/bits/posix_opt.h \
-  /usr/include/x86_64-linux-gnu/bits/environments.h \
-  /usr/include/x86_64-linux-gnu/bits/confname.h \
-  /usr/include/x86_64-linux-gnu/bits/getopt_posix.h \
-  /usr/include/x86_64-linux-gnu/bits/getopt_core.h \
-  /usr/include/x86_64-linux-gnu/bits/unistd_ext.h \
-  /usr/include/linux/close_range.h \
-  /usr/include/x86_64-linux-gnu/sys/syscall.h \
-  /usr/include/x86_64-linux-gnu/asm/unistd.h \
-  /usr/include/x86_64-linux-gnu/asm/unistd_64.h \
-  /usr/include/x86_64-linux-gnu/bits/syscall.h \
-  ../spdlog/include/spdlog/details/log_msg_buffer-inl.h \
-  ../spdlog/include/spdlog/details/backtracer-inl.h \
-  ../spdlog/include/spdlog/logger-inl.h \
-  ../spdlog/include/spdlog/pattern_formatter.h \
-  ../spdlog/include/spdlog/formatter.h \
-  ../spdlog/include/spdlog/pattern_formatter-inl.h \
-  ../spdlog/include/spdlog/details/fmt_helper.h \
-  ../spdlog/include/spdlog/mdc.h \
-  ../spdlog/include/spdlog/sinks/sink.h \
-  ../spdlog/include/spdlog/sinks/sink-inl.h \
-  ../spdlog/include/spdlog/sinks/ansicolor_sink.h \
-  ../spdlog/include/spdlog/details/console_globals.h \
-  ../spdlog/include/spdlog/sinks/ansicolor_sink-inl.h \
-  ../spdlog/include/spdlog/details/synchronous_factory.h \
-  ../spdlog/include/spdlog/version.h \
-  ../spdlog/include/spdlog/spdlog-inl.h \
-  ../spdlog/include/spdlog/sinks/basic_file_sink.h \
-  ../spdlog/include/spdlog/details/file_helper.h \
-  ../spdlog/include/spdlog/details/file_helper-inl.h \
-  ../spdlog/include/spdlog/sinks/base_sink.h \
-  ../spdlog/include/spdlog/sinks/base_sink-inl.h \
-  ../spdlog/include/spdlog/sinks/basic_file_sink-inl.h \
-  ../metadata_common.h \
-  ../remote_server.cpp \
-  ../cpp-httplib/httplib.h \
-  /usr/include/arpa/inet.h \
-  /usr/include/netinet/in.h \
-  /usr/include/x86_64-linux-gnu/sys/socket.h \
-  /usr/include/x86_64-linux-gnu/bits/socket.h \
-  /usr/include/x86_64-linux-gnu/bits/socket_type.h \
-  /usr/include/x86_64-linux-gnu/bits/sockaddr.h \
-  /usr/include/x86_64-linux-gnu/asm/socket.h \
-  /usr/include/asm-generic/socket.h \
-  /usr/include/x86_64-linux-gnu/asm/sockios.h \
-  /usr/include/asm-generic/sockios.h \
-  /usr/include/x86_64-linux-gnu/bits/types/struct_osockaddr.h \
-  /usr/include/x86_64-linux-gnu/bits/in.h \
-  /usr/include/ifaddrs.h \
-  /usr/include/net/if.h \
-  /usr/include/netdb.h \
-  /usr/include/rpc/netdb.h \
-  /usr/include/x86_64-linux-gnu/bits/types/sigevent_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/__sigval_t.h \
-  /usr/include/x86_64-linux-gnu/bits/netdb.h \
-  /usr/include/resolv.h \
-  /usr/include/x86_64-linux-gnu/sys/param.h \
-  /usr/include/signal.h \
-  /usr/include/x86_64-linux-gnu/bits/signum-generic.h \
-  /usr/include/x86_64-linux-gnu/bits/signum-arch.h \
-  /usr/include/x86_64-linux-gnu/bits/types/sig_atomic_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/siginfo_t.h \
-  /usr/include/x86_64-linux-gnu/bits/siginfo-arch.h \
-  /usr/include/x86_64-linux-gnu/bits/siginfo-consts.h \
-  /usr/include/x86_64-linux-gnu/bits/siginfo-consts-arch.h \
-  /usr/include/x86_64-linux-gnu/bits/types/sigval_t.h \
-  /usr/include/x86_64-linux-gnu/bits/sigevent-consts.h \
-  /usr/include/x86_64-linux-gnu/bits/sigaction.h \
-  /usr/include/x86_64-linux-gnu/bits/sigcontext.h \
-  /usr/include/x86_64-linux-gnu/bits/types/stack_t.h \
-  /usr/include/x86_64-linux-gnu/sys/ucontext.h \
-  /usr/include/x86_64-linux-gnu/bits/sigstack.h \
-  /usr/include/x86_64-linux-gnu/bits/sigstksz.h \
-  /usr/include/x86_64-linux-gnu/bits/ss_flags.h \
-  /usr/include/x86_64-linux-gnu/bits/types/struct_sigstack.h \
-  /usr/include/x86_64-linux-gnu/bits/sigthread.h \
-  /usr/include/x86_64-linux-gnu/bits/signal_ext.h \
-  /usr/include/x86_64-linux-gnu/bits/param.h \
-  /usr/include/linux/param.h \
-  /usr/include/x86_64-linux-gnu/asm/param.h \
-  /usr/include/asm-generic/param.h \
-  /usr/include/arpa/nameser.h \
-  /usr/include/arpa/nameser_compat.h \
-  /usr/include/x86_64-linux-gnu/bits/types/res_state.h \
-  /usr/include/c++/11/csignal \
-  /usr/include/netinet/tcp.h \
-  /usr/include/poll.h \
-  /usr/include/x86_64-linux-gnu/sys/poll.h \
-  /usr/include/x86_64-linux-gnu/bits/poll.h \
-  /usr/include/x86_64-linux-gnu/sys/mman.h \
-  /usr/include/x86_64-linux-gnu/bits/mman.h \
-  /usr/include/x86_64-linux-gnu/bits/mman-map-flags-generic.h \
-  /usr/include/x86_64-linux-gnu/bits/mman-linux.h \
-  /usr/include/x86_64-linux-gnu/bits/mman-shared.h \
-  /usr/include/x86_64-linux-gnu/sys/un.h \
-  /usr/include/c++/11/random \
-  /usr/include/c++/11/bits/random.h \
-  /usr/include/x86_64-linux-gnu/c++/11/bits/opt_random.h \
-  /usr/include/c++/11/bits/random.tcc \
-  /usr/include/c++/11/numeric \
-  /usr/include/c++/11/bits/stl_numeric.h \
-  /usr/include/c++/11/pstl/glue_numeric_defs.h \
-  /usr/include/c++/11/regex \
-  /usr/include/c++/11/bitset \
-  /usr/include/c++/11/stack \
-  /usr/include/c++/11/bits/stl_stack.h \
-  /usr/include/c++/11/bits/regex_constants.h \
-  /usr/include/c++/11/bits/regex_error.h \
-  /usr/include/c++/11/bits/regex_automaton.h \
-  /usr/include/c++/11/bits/regex_automaton.tcc \
-  /usr/include/c++/11/bits/regex_scanner.h \
-  /usr/include/c++/11/bits/regex_scanner.tcc \
-  /usr/include/c++/11/bits/regex_compiler.h \
-  /usr/include/c++/11/bits/regex_compiler.tcc \
-  /usr/include/c++/11/bits/regex.h \
-  /usr/include/c++/11/bits/regex.tcc \
-  /usr/include/c++/11/bits/regex_executor.h \
-  /usr/include/c++/11/bits/regex_executor.tcc \
-  /usr/include/c++/11/unordered_set \
-  /usr/include/c++/11/bits/unordered_set.h
+  /usr/include/c++/11/bits/erase_if.h
 
 CMakeFiles/remote_runner.dir/remote_server.cpp.o: ../remote_server.cpp \
   /usr/include/stdc-predef.h \
@@ -1464,7 +1133,82 @@ CMakeFiles/remote_runner.dir/remote_server.cpp.o: ../remote_server.cpp \
   /usr/include/c++/11/bits/this_thread_sleep.h \
   /usr/include/c++/11/unordered_set \
   /usr/include/c++/11/bits/unordered_set.h \
-  ../metadata_common.h
+  ../metadata_common.h \
+  ../rapidjson/include/rapidjson/document.h \
+  ../rapidjson/include/rapidjson/reader.h \
+  ../rapidjson/include/rapidjson/allocators.h \
+  ../rapidjson/include/rapidjson/rapidjson.h \
+  /usr/include/inttypes.h \
+  ../rapidjson/include/rapidjson/internal/meta.h \
+  ../rapidjson/include/rapidjson/rapidjson.h \
+  ../rapidjson/include/rapidjson/stream.h \
+  ../rapidjson/include/rapidjson/encodings.h \
+  ../rapidjson/include/rapidjson/encodedstream.h \
+  ../rapidjson/include/rapidjson/memorystream.h \
+  ../rapidjson/include/rapidjson/internal/clzll.h \
+  ../rapidjson/include/rapidjson/internal/stack.h \
+  ../rapidjson/include/rapidjson/allocators.h \
+  ../rapidjson/include/rapidjson/internal/swap.h \
+  /usr/include/c++/11/cstddef \
+  ../rapidjson/include/rapidjson/internal/strtod.h \
+  ../rapidjson/include/rapidjson/internal/ieee754.h \
+  ../rapidjson/include/rapidjson/internal/biginteger.h \
+  ../rapidjson/include/rapidjson/internal/diyfp.h \
+  ../rapidjson/include/rapidjson/internal/clzll.h \
+  ../rapidjson/include/rapidjson/internal/pow10.h \
+  ../rapidjson/include/rapidjson/error/error.h \
+  ../rapidjson/include/rapidjson/rapidjson.h \
+  ../rapidjson/include/rapidjson/internal/strfunc.h \
+  ../rapidjson/include/rapidjson/stream.h \
+  ../rapidjson/include/rapidjson/rapidjson.h \
+  ../rapidjson/include/rapidjson/writer.h \
+  ../rapidjson/include/rapidjson/internal/dtoa.h \
+  ../rapidjson/include/rapidjson/internal/itoa.h \
+  ../rapidjson/include/rapidjson/internal/itoa.h \
+  ../rapidjson/include/rapidjson/stringbuffer.h \
+  ../rapidjson/include/rapidjson/stringbuffer.h \
+  ../yaml-cpp/include/yaml-cpp/yaml.h \
+  ../yaml-cpp/include/yaml-cpp/parser.h \
+  ../yaml-cpp/include/yaml-cpp/dll.h \
+  ../yaml-cpp/include/yaml-cpp/emitter.h \
+  ../yaml-cpp/include/yaml-cpp/binary.h \
+  ../yaml-cpp/include/yaml-cpp/emitterdef.h \
+  ../yaml-cpp/include/yaml-cpp/emittermanip.h \
+  ../yaml-cpp/include/yaml-cpp/null.h \
+  ../yaml-cpp/include/yaml-cpp/ostream_wrapper.h \
+  ../yaml-cpp/include/yaml-cpp/fptostring.h \
+  ../yaml-cpp/include/yaml-cpp/emitterstyle.h \
+  ../yaml-cpp/include/yaml-cpp/stlemitter.h \
+  ../yaml-cpp/include/yaml-cpp/exceptions.h \
+  ../yaml-cpp/include/yaml-cpp/mark.h \
+  ../yaml-cpp/include/yaml-cpp/noexcept.h \
+  ../yaml-cpp/include/yaml-cpp/traits.h \
+  ../yaml-cpp/include/yaml-cpp/node/node.h \
+  ../yaml-cpp/include/yaml-cpp/node/detail/iterator_fwd.h \
+  ../yaml-cpp/include/yaml-cpp/node/ptr.h \
+  ../yaml-cpp/include/yaml-cpp/node/type.h \
+  ../yaml-cpp/include/yaml-cpp/node/impl.h \
+  ../yaml-cpp/include/yaml-cpp/node/detail/memory.h \
+  ../yaml-cpp/include/yaml-cpp/node/detail/node.h \
+  ../yaml-cpp/include/yaml-cpp/node/detail/node_ref.h \
+  ../yaml-cpp/include/yaml-cpp/node/detail/node_data.h \
+  ../yaml-cpp/include/yaml-cpp/node/detail/node_iterator.h \
+  ../yaml-cpp/include/yaml-cpp/node/iterator.h \
+  ../yaml-cpp/include/yaml-cpp/node/detail/iterator.h \
+  ../yaml-cpp/include/yaml-cpp/node/convert.h \
+  /usr/include/c++/11/valarray \
+  /usr/include/c++/11/bits/valarray_array.h \
+  /usr/include/c++/11/bits/valarray_array.tcc \
+  /usr/include/c++/11/bits/valarray_before.h \
+  /usr/include/c++/11/bits/slice_array.h \
+  /usr/include/c++/11/bits/valarray_after.h \
+  /usr/include/c++/11/bits/gslice.h \
+  /usr/include/c++/11/bits/gslice_array.h \
+  /usr/include/c++/11/bits/mask_array.h \
+  /usr/include/c++/11/bits/indirect_array.h \
+  ../yaml-cpp/include/yaml-cpp/node/detail/impl.h \
+  ../yaml-cpp/include/yaml-cpp/node/parse.h \
+  ../yaml-cpp/include/yaml-cpp/node/emit.h
 
 
 /usr/include/c++/11/unordered_set:
