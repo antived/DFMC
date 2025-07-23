@@ -54,3 +54,8 @@ CREATE TABLE machine_ip (
 
 --uuid <uuid> --path <file_path> --attr <name|size|time|root>
 
+## Example 
+
+![Alt text](proj.png)
+
+
