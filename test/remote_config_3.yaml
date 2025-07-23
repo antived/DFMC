@@ -1,0 +1,14 @@
+machine:
+ id: "m8f3fcd8-5r6m-4bd2-bce2-e85e4fcb455v"
+ hostname: "pc-03"
+ ip: "127.0.0.1"
+ port: 5003
+
+parser:
+ scan_root: "/home/vedant/OS_proj/testcase_3"
+ output_file: "metadata.json"
+ log_level: "info"
+
+central_server:
+ ip: "127.0.0.1"
+ port: 8080

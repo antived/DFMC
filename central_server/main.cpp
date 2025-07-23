@@ -33,7 +33,7 @@ int main(){
     Server central_server;
     incoming_machine_data(central_server);
     incoming_api(central_server);
-    YAML::Node config_file = YAML::LoadFile("config.yaml");
+    YAML::Node config_file = YAML::LoadFile("/home/vedant/cpp_dev/central_server/config.yaml");
     int central_port = config_file["port"].as<int>();
     std::thread server_thread([&central_server, central_port]() {
         central_server.listen("0.0.0.0", central_port);

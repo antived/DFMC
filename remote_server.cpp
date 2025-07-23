@@ -30,7 +30,7 @@ using namespace rapidjson;
 //Set up http server that is going to going to service REST API based query requests.
 void push_metadata(string &central_ip,int port){
     while(true){
-        this_thread::sleep_for(chrono::minutes(25));
+        this_thread::sleep_for(chrono::seconds(30));
         std::ifstream ipstream("metadata.json");
         if(!ipstream) continue;
         stringstream buffer;
@@ -39,6 +39,7 @@ void push_metadata(string &central_ip,int port){
         //sending it to the central cache server.
         string POST_URL = "http://"+central_ip+":"+to_string(port);
         Client cli(central_ip,port);    
+        //cout << "[DEBUG] Payload: " << buffer.str() << endl;
         auto res = cli.Post("/metadata_full",buffer.str(),"application/json");
         if(res && res->status == 200){
             cout << "[$INFO$]The metadata.json file was sent successfully to the central node" << endl;
@@ -104,10 +105,11 @@ void machine_ack(string &central_ip, YAML::Node &machine_config,int port){
     }
 }
 
-void run_server(){
-    YAML::Node yml = YAML::LoadFile("config.yaml");
+void run_server(const std::string &config_path){
+    YAML::Node yml = YAML::LoadFile(config_path);
     string central_ip = yml["central_server"]["ip"].as<string>();
     int port = yml["central_server"]["port"].as<int>();
+    int my_port = yml["machine"]["port"].as<int>();
     machine_ack(central_ip,yml,port);
     std::thread t([&central_ip, port]() {
         push_metadata(central_ip, port);
@@ -195,5 +197,5 @@ void run_server(){
         resp.status = 200;
         resp.set_content("the base dir is:" + (string)base_dir,"text/plain");
     });
-    svr.listen("0.0.0.0", 5000);  
+    svr.listen("0.0.0.0", my_port);  
 }

@@ -33,9 +33,9 @@ struct FileMetadata {
 
 void search_db(const string &name_filter){
     try{
-        pqxx::connection c("dbname=postgres user=postgres");
+        pqxx::connection c("host=localhost port=5432 dbname=postgres user=postgres password=kavurdo1");
         pqxx::work txn(c);
-        string qry = "SELECT file_path,file_name,size_bytes,modified_time FROM file_metadata WHERE name ILIKE " +
+        string qry = "SELECT uuid, file_path, file_name, size_bytes, modified_time FROM file_metadata WHERE file_name ILIKE " +
             txn.quote("%" + name_filter + "%");
         pqxx::result R = txn.exec(qry);
         if(R.empty()){
@@ -118,18 +118,31 @@ void incoming_machine_data(Server &central_svr){
 
     central_svr.Post("/machine_info",[](const Request &req, Response &rst){
         try{
-            //reading the machine info, and putting it in the maps.
             Document doc;
-            if(doc.Parse(req.body.c_str()).HasParseError()){
+            if (doc.Parse(req.body.c_str()).HasParseError()) {
                 throw runtime_error("Could not parse the machine info json data");
             }
             if (!doc.IsObject()) {
                 throw runtime_error("JSON is not an object");
             }
-            string machine_ip = doc["machine_ip"].GetString();
-            string uuid = doc["uuid"].GetString();
-            int remote_port= doc["port"].GetInt();
-            string machine_no = doc["machine_no"].GetString();
+            if (!doc.HasMember("machine_info") || !doc["machine_info"].IsObject()) {
+                throw runtime_error("Missing or invalid 'machine_info' object");
+            }
+            const Value& info = doc["machine_info"];
+            vector<string> required_keys = { "machine_ip", "uuid", "port_no", "machine_no" };
+            for (const auto& key : required_keys) {
+                if (!info.HasMember(key.c_str())) {
+                    throw runtime_error("Missing required field: " + key);
+                }
+            }
+            if (!info["machine_ip"].IsString() || !info["uuid"].IsString() || 
+                !info["port_no"].IsInt() || !info["machine_no"].IsString()) {
+                throw runtime_error("Incorrect types in JSON fields");
+            }
+            string machine_ip = info["machine_ip"].GetString();
+            string uuid = info["uuid"].GetString();
+            int remote_port = info["port_no"].GetInt();
+            string machine_no = info["machine_no"].GetString();
             uuid_machine temp(machine_no,machine_ip,remote_port);
             {
                 std::lock_guard<mutex> lock(central_mutex); 
@@ -162,11 +175,13 @@ void incoming_machine_data(Server &central_svr){
 }
 
 void incoming_api(Server &central_svr){
+    cout << "hi" << "\n";
     //incoming data from the remote servers is going to be stored in here.
     static mutex file_mutex;
     central_svr.Post("/metadata_full",[](const Request &req, Response &resp){
         try{
             Document doc; 
+            //cout << "[DEBUG] Received body: " << req.body << endl;
             if (doc.Parse(req.body.c_str()).HasParseError()) {
                 throw runtime_error("JSON parse error");
             }
@@ -181,7 +196,7 @@ void incoming_api(Server &central_svr){
             if (!metadata.IsObject()) {
                 throw runtime_error("Metadata is not an object");
             }
-            pqxx::connection c("dbname=postgres user=postgres");
+            pqxx::connection c("host=localhost port=5432 dbname=postgres user=postgres password=kavurdo1");
             pqxx::work txn(c);
             //-----------------------------SEND TO DATABASE/CACHE HERE------------------------------------//
             for (auto itr = metadata.MemberBegin(); itr != metadata.MemberEnd(); itr++) {
@@ -205,6 +220,7 @@ void incoming_api(Server &central_svr){
                 }
             }
             txn.commit();
+            cout << "data was inserted into the database successfully" << endl;
             resp.set_content("The metadata was successfully stored in the database", "text/plain");
             resp.status = 200;
         }
@@ -222,7 +238,7 @@ void incoming_api(Server &central_svr){
         }
         string name_filter = req.get_param_value("name");
         try {
-            pqxx::connection c("dbname=postgres user=postgres");
+            pqxx::connection c("host=localhost port=5432 dbname=postgres user=postgres password=kavurdo1");
             pqxx::work txn(c);
             string qry = "SELECT uuid, file_path, file_name, size_bytes, modified_time "
                         "FROM file_metadata WHERE file_name ILIKE " + txn.quote("%" + name_filter + "%");

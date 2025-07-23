@@ -1,7 +1,7 @@
 machine:
  id: "a1f3fcd8-3e4a-4bd2-bce2-e85e4fcb902f"
  hostname: "pc-01"
- ip: "192.168.1.101"
+ ip: "127.0.0.1""
  port: 5000
 
 parser:
@@ -10,5 +10,5 @@ parser:
  log_level: "info"
 
 central_server:
- ip: "192.168.1.100"
+ ip: "127.0.0.1""
  port: 8080
