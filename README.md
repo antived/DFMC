@@ -1,4 +1,4 @@
-## Distributed File Metadata Indexer
+# Distributed File Metadata Indexer
 
 A lightweight distributed system to index and query file metadata across multiple machines. Each client machine parses its file system, extracts metadata, and sends it to a central C++ server that stores it in a PostgreSQL database. The server supports querying based on file names, sizes, and timestamps.
 
@@ -17,36 +17,21 @@ A lightweight distributed system to index and query file metadata across multipl
 
 ---
 
-## Basic Project Structure
 
-bash
-.
-├── remote_server/
-│   └── metadata_parser.cpp       # Scans and generates JSON metadata
-├── central_server/
-│   └── server_main.cpp           # HTTP handler, JSON parser, PostgreSQL inserter
-├── database/
-│   └── schema.sql                # PostgreSQL schema definition
-├── main/
-│   └── query_interface.cpp       # CLI query tool for PostgreSQL
-├── include/
-│   └── rapidjson/                # RapidJSON headers
-└── README.md
+# Requirements
 
-## Requirements
-
-# Client-Side
+## Client-Side
 C++17 or later
 RapidJSON
 Filesystem library (C++17 <filesystem>)
 
-# Server-Side
+## Server-Side
 C++17
 libpqxx (PostgreSQL C++ connector)
 cpp-httplib
 PostgreSQL 13 or later
 
-## DATABASE SETUP 
+# DATABASE SETUP 
 
 psql -U postgres -d postgres -W
 
@@ -64,7 +49,8 @@ CREATE TABLE machine_ip (
     ip TEXT
 );
 
-## SAMPLE QUERY
+# SAMPLE QUERY
 --search <filename>
+
 --uuid <uuid> --path <file_path> --attr <name|size|time|root>
 
