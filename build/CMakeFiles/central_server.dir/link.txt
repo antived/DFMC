@@ -1,0 +1,1 @@
+/usr/bin/c++ CMakeFiles/central_server.dir/central_server/api/endpoints.cpp.o CMakeFiles/central_server.dir/central_server/main.cpp.o -o central_server  -Wl,-rpath,/usr/local/lib -lpthread -lpqxx /usr/local/lib/libyaml-cpp.so.0.8.0 

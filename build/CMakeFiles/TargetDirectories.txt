@@ -1,3 +1,4 @@
 /home/vedant/cpp_dev/build/CMakeFiles/remote_runner.dir
+/home/vedant/cpp_dev/build/CMakeFiles/central_server.dir
 /home/vedant/cpp_dev/build/CMakeFiles/edit_cache.dir
 /home/vedant/cpp_dev/build/CMakeFiles/rebuild_cache.dir

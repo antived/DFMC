@@ -95,6 +95,10 @@ void parser(){
     Document doc;
     doc.SetObject();
     Document::AllocatorType &allocator = doc.GetAllocator();
+    string uuid = config_read["machine"]["id"].as<std::string>();
+    doc.AddMember("uuid", Value(uuid.c_str(), allocator), allocator);
+    // Create "metadata" object
+    Value metadata(kObjectType);
     for(auto &[path_var,value] : mapp){
         Value entry(kObjectType);
         entry.AddMember("Filename", Value(value.name.string().c_str(),allocator),allocator);
@@ -105,9 +109,10 @@ void parser(){
         time_t new_time = std::chrono::system_clock::to_time_t(fixed);
         string time_fin = asctime(localtime(&new_time));
         time_fin.pop_back(); //removing the \0.
-        entry.AddMember("last modified",Value(time_fin.c_str(),allocator),allocator);
-        doc.AddMember(Value(path_var.string().c_str(), allocator), entry, allocator);
+        entry.AddMember("modified_time",Value(time_fin.c_str(),allocator),allocator);
+        metadata.AddMember(Value(path_var.string().c_str(), allocator), entry, allocator);
     }
+    doc.AddMember("metadata",metadata, allocator);
     //json has been structured, now will write to file..
     try{
         StringBuffer buf;

@@ -4,7 +4,7 @@
 # compile CXX with /usr/bin/c++
 CXX_DEFINES = 
 
-CXX_INCLUDES = -I/home/vedant/cpp_dev -I/home/vedant/cpp_dev/rapidjson/include -I/home/vedant/cpp_dev/yaml-cpp/include -I/home/vedant/cpp_dev/spdlog/include -I/home/vedant/cpp_dev/cpp-httplib
+CXX_INCLUDES = -I/home/vedant/cpp_dev -I/home/vedant/cpp_dev/rapidjson/include -I/home/vedant/cpp_dev/yaml-cpp/include -I/home/vedant/cpp_dev/spdlog/include -I/home/vedant/cpp_dev/cpp-httplib -I/home/vedant/cpp_dev/central_server -I/usr/include/postgresql
 
 CXX_FLAGS = 
 

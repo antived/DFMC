@@ -107,7 +107,7 @@ void machine_ack(string &central_ip, YAML::Node &machine_config,int port){
 void run_server(){
     YAML::Node yml = YAML::LoadFile("config.yaml");
     string central_ip = yml["central_server"]["ip"].as<string>();
-    int port = yml["machine"]["port"].as<int>();
+    int port = yml["central_server"]["port"].as<int>();
     machine_ack(central_ip,yml,port);
     std::thread t([&central_ip, port]() {
         push_metadata(central_ip, port);
@@ -195,5 +195,5 @@ void run_server(){
         resp.status = 200;
         resp.set_content("the base dir is:" + (string)base_dir,"text/plain");
     });
-    svr.listen("0.0.0.0", 8080);  ////IMP -> The IP needs to be changed.
+    svr.listen("0.0.0.0", 5000);  
 }

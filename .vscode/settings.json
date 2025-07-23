@@ -74,6 +74,7 @@
         "span": "cpp",
         "valarray": "cpp",
         "variant": "cpp",
-        "parser_with_yaml": "cpp"
+        "parser_with_yaml": "cpp",
+        "pqxx": "cpp"
     }
 }

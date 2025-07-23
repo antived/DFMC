@@ -129,6 +129,67 @@ remote_runner/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/remote_runner.dir/build.make CMakeFiles/remote_runner.dir/build
 .PHONY : remote_runner/fast
 
+#=============================================================================
+# Target rules for targets named central_server
+
+# Build rule for target.
+central_server: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 central_server
+.PHONY : central_server
+
+# fast build rule for target.
+central_server/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/central_server.dir/build.make CMakeFiles/central_server.dir/build
+.PHONY : central_server/fast
+
+central_server/api/endpoints.o: central_server/api/endpoints.cpp.o
+.PHONY : central_server/api/endpoints.o
+
+# target to build an object file
+central_server/api/endpoints.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/central_server.dir/build.make CMakeFiles/central_server.dir/central_server/api/endpoints.cpp.o
+.PHONY : central_server/api/endpoints.cpp.o
+
+central_server/api/endpoints.i: central_server/api/endpoints.cpp.i
+.PHONY : central_server/api/endpoints.i
+
+# target to preprocess a source file
+central_server/api/endpoints.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/central_server.dir/build.make CMakeFiles/central_server.dir/central_server/api/endpoints.cpp.i
+.PHONY : central_server/api/endpoints.cpp.i
+
+central_server/api/endpoints.s: central_server/api/endpoints.cpp.s
+.PHONY : central_server/api/endpoints.s
+
+# target to generate assembly for a file
+central_server/api/endpoints.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/central_server.dir/build.make CMakeFiles/central_server.dir/central_server/api/endpoints.cpp.s
+.PHONY : central_server/api/endpoints.cpp.s
+
+central_server/main.o: central_server/main.cpp.o
+.PHONY : central_server/main.o
+
+# target to build an object file
+central_server/main.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/central_server.dir/build.make CMakeFiles/central_server.dir/central_server/main.cpp.o
+.PHONY : central_server/main.cpp.o
+
+central_server/main.i: central_server/main.cpp.i
+.PHONY : central_server/main.i
+
+# target to preprocess a source file
+central_server/main.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/central_server.dir/build.make CMakeFiles/central_server.dir/central_server/main.cpp.i
+.PHONY : central_server/main.cpp.i
+
+central_server/main.s: central_server/main.cpp.s
+.PHONY : central_server/main.s
+
+# target to generate assembly for a file
+central_server/main.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/central_server.dir/build.make CMakeFiles/central_server.dir/central_server/main.cpp.s
+.PHONY : central_server/main.cpp.s
+
 parser_with_yaml.o: parser_with_yaml.cpp.o
 .PHONY : parser_with_yaml.o
 
@@ -209,7 +270,14 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
+	@echo "... central_server"
 	@echo "... remote_runner"
+	@echo "... central_server/api/endpoints.o"
+	@echo "... central_server/api/endpoints.i"
+	@echo "... central_server/api/endpoints.s"
+	@echo "... central_server/main.o"
+	@echo "... central_server/main.i"
+	@echo "... central_server/main.s"
 	@echo "... parser_with_yaml.o"
 	@echo "... parser_with_yaml.i"
 	@echo "... parser_with_yaml.s"

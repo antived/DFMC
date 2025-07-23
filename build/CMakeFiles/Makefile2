@@ -64,6 +64,7 @@ CMAKE_BINARY_DIR = /home/vedant/cpp_dev/build
 
 # The main recursive "all" target.
 all: CMakeFiles/remote_runner.dir/all
+all: CMakeFiles/central_server.dir/all
 .PHONY : all
 
 # The main recursive "preinstall" target.
@@ -72,6 +73,7 @@ preinstall:
 
 # The main recursive "clean" target.
 clean: CMakeFiles/remote_runner.dir/clean
+clean: CMakeFiles/central_server.dir/clean
 .PHONY : clean
 
 #=============================================================================
@@ -81,7 +83,7 @@ clean: CMakeFiles/remote_runner.dir/clean
 CMakeFiles/remote_runner.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/remote_runner.dir/build.make CMakeFiles/remote_runner.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/remote_runner.dir/build.make CMakeFiles/remote_runner.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/vedant/cpp_dev/build/CMakeFiles --progress-num=1,2,3,4 "Built target remote_runner"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/vedant/cpp_dev/build/CMakeFiles --progress-num=4,5,6,7 "Built target remote_runner"
 .PHONY : CMakeFiles/remote_runner.dir/all
 
 # Build rule for subdir invocation for target.
@@ -99,6 +101,32 @@ remote_runner: CMakeFiles/remote_runner.dir/rule
 CMakeFiles/remote_runner.dir/clean:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/remote_runner.dir/build.make CMakeFiles/remote_runner.dir/clean
 .PHONY : CMakeFiles/remote_runner.dir/clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/central_server.dir
+
+# All Build rule for target.
+CMakeFiles/central_server.dir/all:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/central_server.dir/build.make CMakeFiles/central_server.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/central_server.dir/build.make CMakeFiles/central_server.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/vedant/cpp_dev/build/CMakeFiles --progress-num=1,2,3 "Built target central_server"
+.PHONY : CMakeFiles/central_server.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/central_server.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/vedant/cpp_dev/build/CMakeFiles 3
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/central_server.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/vedant/cpp_dev/build/CMakeFiles 0
+.PHONY : CMakeFiles/central_server.dir/rule
+
+# Convenience name for target.
+central_server: CMakeFiles/central_server.dir/rule
+.PHONY : central_server
+
+# clean rule for target.
+CMakeFiles/central_server.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/central_server.dir/build.make CMakeFiles/central_server.dir/clean
+.PHONY : CMakeFiles/central_server.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.

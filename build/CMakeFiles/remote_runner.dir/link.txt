@@ -1,1 +1,1 @@
-/usr/bin/c++ CMakeFiles/remote_runner.dir/remote_runner.cpp.o CMakeFiles/remote_runner.dir/remote_server.cpp.o CMakeFiles/remote_runner.dir/parser_with_yaml.cpp.o -o remote_runner  -Wl,-rpath,/usr/local/lib -lpthread /usr/local/lib/libyaml-cpp.so.0.8.0 
+/usr/bin/c++ CMakeFiles/remote_runner.dir/remote_runner.cpp.o CMakeFiles/remote_runner.dir/remote_server.cpp.o CMakeFiles/remote_runner.dir/parser_with_yaml.cpp.o -o remote_runner  -Wl,-rpath,/usr/local/lib -lpthread -lpqxx /usr/local/lib/libyaml-cpp.so.0.8.0 
