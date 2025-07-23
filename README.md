@@ -18,7 +18,7 @@ A lightweight distributed system to index and query file metadata across multipl
 ---
 
 
-# Requirements
+## Requirements
 
 ## Client-Side
 C++17 or later
@@ -31,7 +31,7 @@ libpqxx (PostgreSQL C++ connector)
 cpp-httplib
 PostgreSQL 13 or later
 
-# DATABASE SETUP 
+## DATABASE SETUP 
 
 psql -U postgres -d postgres -W
 
@@ -49,7 +49,7 @@ CREATE TABLE machine_ip (
     ip TEXT
 );
 
-# SAMPLE QUERY
+## SAMPLE QUERY
 --search <filename>
 
 --uuid <uuid> --path <file_path> --attr <name|size|time|root>
