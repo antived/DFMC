@@ -31,7 +31,7 @@ libpqxx (PostgreSQL C++ connector)
 cpp-httplib
 PostgreSQL 13 or later
 
-# DATABASE SETUP 
+## Database-setup 
 
 psql -U postgres -d postgres -W
 
@@ -49,7 +49,7 @@ CREATE TABLE machine_ip (
     ip TEXT
 );
 
-# SAMPLE QUERY
+## Sample query
 --search <filename>
 
 --uuid <uuid> --path <file_path> --attr <name|size|time|root>
